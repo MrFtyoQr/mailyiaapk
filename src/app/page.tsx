@@ -179,9 +179,7 @@ export default function Component() {
 
             {/* Medical Quote */}
             <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto border border-blue-100">
-              <p className="text-gray-700 italic text-lg transition-all duration-500">
-                "{medicalQuotes[currentQuote]}"
-              </p>
+              <p className="text-gray-700 italic text-lg transition-all duration-500">&quot;{medicalQuotes[currentQuote]}&quot;</p>
             </div>
           </div>
         </div>
@@ -326,9 +324,7 @@ export default function Component() {
                   artificial avanzada (OpenRouter/Gemini).
                 </p>
                 <div className="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-500">
-                  <p className="text-purple-800 italic">
-                    "La IA no reemplaza al médico, pero te ayuda a entender mejor tu salud"
-                  </p>
+                  <p className="text-purple-800 italic">&quot;La IA no reemplaza al médico, pero te ayuda a entender mejor tu salud&quot;</p>
                 </div>
               </div>
               <div className="lg:w-1/2">
@@ -633,7 +629,7 @@ export default function Component() {
 
             <div className="text-center md:text-right">
               <p className="text-gray-400 mb-2">Grupo Camsa</p>
-              <p className="text-sm text-gray-500">"Tu salud es nuestra prioridad"</p>
+              <p className="text-sm text-gray-500">&quot;Tu salud es nuestra prioridad&quot;</p>
             </div>
           </div>
 

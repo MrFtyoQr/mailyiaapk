@@ -193,7 +193,7 @@ export default function UserGuide() {
 
             {/* User Quote */}
             <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto border border-blue-100 mb-8">
-              <p className="text-gray-700 italic text-lg transition-all duration-500">"{userQuotes[currentQuote]}"</p>
+              <p className="text-gray-700 italic text-lg transition-all duration-500">&quot;{userQuotes[currentQuote]}&quot;</p>
             </div>
           </div>
         </div>
@@ -469,7 +469,7 @@ export default function UserGuide() {
 
             <div className="text-center md:text-right">
               <p className="text-gray-400 mb-2">Grupo Camsa</p>
-              <p className="text-sm text-gray-500">"Cuidando tu salud, un día a la vez"</p>
+              <p className="text-sm text-gray-500">&quot;Cuidando tu salud, un día a la vez&quot;</p>
             </div>
           </div>
 
