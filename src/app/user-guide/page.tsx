@@ -268,8 +268,8 @@ export default function UserGuide() {
 
                 <div className="mt-8 p-4 bg-white/10 rounded-lg backdrop-blur-sm">
                   <p className="text-center text-purple-100 italic">
-                    "La IA de Maily está diseñada para ser tu compañera de confianza, no para reemplazar a los médicos,
-                    sino para empoderarte con conocimiento y motivarte a priorizar tu salud."
+                    &quot;La IA de Maily está diseñada para ser tu compañera de confianza, no para reemplazar a los médicos,
+                    sino para empoderarte con conocimiento y motivarte a priorizar tu salud.&quot;
                   </p>
                 </div>
               </CardContent>
