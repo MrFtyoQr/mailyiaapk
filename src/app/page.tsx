@@ -1,9 +1,16 @@
+// Archivo: src/app/page.tsx
+// Página principal de Maily T Cuida AI
+// Contiene la estructura general, secciones, componentes y lógica de la landing page principal.
+
 "use client"
 
+// Importaciones de React y hooks
 import { useState, useEffect } from "react"
+// Importación de componentes UI personalizados
 import { Button } from "../../button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../card"
 import { Badge } from "../../badge"
+// Importación de íconos de Lucide React
 import {
   Heart,
   Activity,
@@ -28,8 +35,10 @@ import {
   Zap,
   Globe,
 } from "lucide-react"
+// Importación de componente de imagen optimizada de Next.js
 import Image from "next/image"
 
+// Frases motivacionales sobre salud que se muestran de forma rotativa
 const medicalQuotes = [
   "La salud no lo es todo, pero sin ella, todo lo demás es nada. - Arthur Schopenhauer",
   "Prevenir es mejor que curar. - Desiderius Erasmus",
@@ -37,6 +46,7 @@ const medicalQuotes = [
   "La medicina cura a veces, alivia a menudo, consuela siempre. - Hipócrates",
 ]
 
+// Lista de funcionalidades principales de la app, cada una con su ícono, título, descripción y color
 const features = [
   {
     icon: Activity,
@@ -79,6 +89,7 @@ const features = [
   },
 ]
 
+// Estadísticas rápidas que se muestran en la sección de stats
 const stats = [
   { number: "13+", label: "Signos Vitales", icon: Heart },
   { number: "24/7", label: "Monitoreo", icon: Shield },
@@ -86,10 +97,14 @@ const stats = [
   { number: "PDF", label: "Reportes", icon: FileText },
 ]
 
+// Componente principal de la página
 export default function Component() {
+  // Estado para la frase motivacional actual
   const [currentQuote, setCurrentQuote] = useState(0)
+  // Estado para animación de aparición
   const [isVisible, setIsVisible] = useState(false)
 
+  // Efecto para rotar frases motivacionales cada 5 segundos
   useEffect(() => {
     setIsVisible(true)
     const interval = setInterval(() => {
@@ -99,8 +114,9 @@ export default function Component() {
   }, [])
 
   return (
+    // Contenedor principal con fondo degradado
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
-      {/* Animated Background Elements */}
+      {/* Elementos animados de fondo decorativos */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-20 h-20 bg-red-200 rounded-full opacity-20 animate-pulse"></div>
         <div className="absolute top-40 right-20 w-16 h-16 bg-blue-200 rounded-full opacity-20 animate-bounce"></div>
@@ -108,16 +124,19 @@ export default function Component() {
         <div className="absolute bottom-20 right-10 w-18 h-18 bg-purple-200 rounded-full opacity-20 animate-bounce"></div>
       </div>
 
-      {/* Header */}
+      {/* Header principal con logo, título y badge de fase */}
       <header className="relative z-10 bg-white/80 backdrop-blur-sm border-b border-blue-100 sticky top-0">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
+            {/* Logo de la app */}
             <Image src="/MailyLog.png" alt="Maily T Cuida Logo" width={40} height={40} className="rounded-lg" />
             <div>
-              <h1 className="text-xl font-bold text-gray-800">Maily T Cuida</h1>
-              <p className="text-sm text-gray-600">by Grupo Camsa</p>
+              <h1 className="text-xl font-bold text-gray-800">Maily T Cuida AI</h1>
+              <p className="text-sm text-gray-600">by Grupo Camsa & Universidad Tecnologica de Acapulco</p>
+              {/* Aquí puedes agregar créditos adicionales si lo deseas */}
             </div>
           </div>
+          {/* Badge de fase alpha */}
           <Badge variant="secondary" className="bg-green-100 text-green-800">
             <Play className="w-3 h-3 mr-1" />
             Fase Alpha
@@ -125,13 +144,14 @@ export default function Component() {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Sección principal (Hero) con logo grande, título, descripción y botones de acción */}
       <section className="relative py-20 px-4">
         <div className="container mx-auto text-center">
           <div
             className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             <div className="mb-8">
+              {/* Logo grande animado */}
               <Image
                 src="/MailyLog.png"
                 alt="Maily T Cuida"
@@ -141,24 +161,27 @@ export default function Component() {
               />
             </div>
 
+            {/* Título principal */}
             <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-6">
               <span className="bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
                 Maily T Cuida
               </span>
             </h1>
 
+            {/* Descripción principal */}
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Tu compañero inteligente para el monitoreo de salud. Registra signos vitales, obtén análisis con IA y
               mantén el control total de tu bienestar.
             </p>
 
+            {/* Botones de acción: Descargar APK y Guía de Usuario */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-4 text-lg rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/1C3hOI00-ArYKQI4gp0kgReUiFtOlKUPw/view?usp=sharing",
+                    "https://drive.google.com/file/d/11gq3ePJ0Dz7HKjh94vmRotiLV530sm6v/view?usp=sharing",
                     "_blank",
                   )
                 }
@@ -177,7 +200,7 @@ export default function Component() {
               </Button>
             </div>
 
-            {/* Medical Quote */}
+            {/* Frase motivacional animada */}
             <div className="bg-white/60 backdrop-blur-sm rounded-lg p-6 max-w-2xl mx-auto border border-blue-100">
               <p className="text-gray-700 italic text-lg transition-all duration-500">&quot;{medicalQuotes[currentQuote]}&quot;</p>
             </div>
@@ -185,7 +208,7 @@ export default function Component() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Sección de estadísticas rápidas */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-green-600">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -200,7 +223,7 @@ export default function Component() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Sección de funcionalidades principales */}
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -210,6 +233,7 @@ export default function Component() {
             </p>
           </div>
 
+          {/* Grid de cards de funcionalidades */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card
@@ -233,13 +257,13 @@ export default function Component() {
         </div>
       </section>
 
-      {/* Detailed Features */}
+      {/* Sección de detalles de funcionalidades */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">Explora Cada Funcionalidad</h2>
 
           <div className="space-y-16">
-            {/* Nursing Screen */}
+            {/* Ejemplo: Pantalla de Enfermería */}
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
                 <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
@@ -277,7 +301,7 @@ export default function Component() {
               </div>
             </div>
 
-            {/* Charts */}
+            {/* Ejemplo: Gráficas */}
             <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
               <div className="lg:w-1/2">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
@@ -312,7 +336,7 @@ export default function Component() {
               </div>
             </div>
 
-            {/* AI Analysis */}
+            {/* Ejemplo: Análisis con IA */}
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
                 <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
@@ -339,7 +363,7 @@ export default function Component() {
         </div>
       </section>
 
-      {/* Download Section */}
+      {/* Sección de descarga de la app */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600">
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
@@ -349,6 +373,7 @@ export default function Component() {
               tu bienestar hoy mismo.
             </p>
 
+            {/* Card de descarga con logo y botón */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
               <div className="flex items-center justify-center mb-4">
                 <Image src="/MailyLog.png" alt="Maily T Cuida" width={80} height={80} className="rounded-xl" />
@@ -361,7 +386,7 @@ export default function Component() {
                 className="bg-white text-green-600 hover:bg-gray-100 px-12 py-4 text-xl rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/1C3hOI00-ArYKQI4gp0kgReUiFtOlKUPw/view?usp=sharing",
+                    "https://drive.google.com/file/d/11gq3ePJ0Dz7HKjh94vmRotiLV530sm6v/view?usp=sharing",
                     "_blank",
                   )
                 }
@@ -371,6 +396,7 @@ export default function Component() {
               </Button>
             </div>
 
+            {/* Stats de confianza */}
             <div className="grid md:grid-cols-3 gap-6 text-white">
               <div className="flex items-center justify-center space-x-2">
                 <Shield className="w-5 h-5" />
@@ -389,7 +415,7 @@ export default function Component() {
         </div>
       </section>
 
-      {/* Collaborators Section */}
+      {/* Sección de colaboradores y equipo */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -399,7 +425,7 @@ export default function Component() {
             </p>
           </div>
 
-          {/* Main Collaborator - Dr. Jair Cambrón */}
+          {/* Card principal del colaborador médico */}
           <div className="max-w-4xl mx-auto mb-16">
             <Card className="overflow-hidden shadow-2xl border-0 bg-gradient-to-r from-blue-600 to-green-600 text-white">
               <CardContent className="p-0">
@@ -475,7 +501,7 @@ export default function Component() {
             </Card>
           </div>
 
-          {/* Development Team */}
+          {/* Grid de cards del equipo de desarrollo */}
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-800 mb-4">Equipo de Desarrolladores</h3>
@@ -483,7 +509,7 @@ export default function Component() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {/* Joseph Quintana */}
+              {/* Card: Joseph Quintana */}
               <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative">
@@ -519,7 +545,7 @@ export default function Component() {
                 </CardContent>
               </Card>
 
-              {/* Danna Liborio */}
+              {/* Card: Danna Liborio */}
               <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative">
@@ -554,7 +580,7 @@ export default function Component() {
                 </CardContent>
               </Card>
 
-              {/* Kevin Eduardo */}
+              {/* Card: Kevin Eduardo */}
               <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm overflow-hidden">
                 <CardContent className="p-0">
                   <div className="relative">
@@ -590,7 +616,7 @@ export default function Component() {
               </Card>
             </div>
 
-            {/* Team Stats */}
+            {/* Stats del equipo */}
             <div className="mt-16 bg-gradient-to-r from-blue-600 to-green-600 rounded-2xl p-8 text-white text-center">
               <h4 className="text-2xl font-bold mb-6">Nuestro Compromiso</h4>
               <div className="grid md:grid-cols-3 gap-8">
@@ -615,7 +641,7 @@ export default function Component() {
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Footer con créditos y derechos */}
       <footer className="bg-gray-800 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
@@ -623,7 +649,7 @@ export default function Component() {
               <Image src="/MailyLog.png" alt="Maily T Cuida" width={40} height={40} className="rounded-lg" />
               <div>
                 <h3 className="text-xl font-bold">Maily T Cuida</h3>
-                <p className="text-gray-400">Desarrollado por Joseph</p>
+                <p className="text-gray-400">Desarrollado por Joseph Quintana</p>
               </div>
             </div>
 
@@ -634,7 +660,7 @@ export default function Component() {
           </div>
 
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-            <p className="text-gray-400">© 2024 Maily T Cuida - Todos los derechos reservados</p>
+            <p className="text-gray-400">© 2025 Maily T Cuida - Todos los derechos reservados</p>
             <p className="text-sm text-gray-500 mt-2">Versión Alpha - En desarrollo continuo</p>
           </div>
         </div>
@@ -642,3 +668,4 @@ export default function Component() {
     </div>
   )
 }
+// Fin del archivo page.tsx

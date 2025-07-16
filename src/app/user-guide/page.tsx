@@ -395,7 +395,7 @@ export default function UserGuide() {
               className="bg-white text-green-600 hover:bg-gray-100 px-12 py-4 text-xl rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1C3hOI00-ArYKQI4gp0kgReUiFtOlKUPw/view?usp=sharing",
+                  "https://drive.google.com/file/d/11gq3ePJ0Dz7HKjh94vmRotiLV530sm6v/view?usp=sharing",
                   "_blank",
                 )
               }
@@ -474,7 +474,7 @@ export default function UserGuide() {
           </div>
 
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-            <p className="text-gray-400">© 2024 Maily T Cuida - Todos los derechos reservados</p>
+            <p className="text-gray-400">© 2025 Maily T Cuida - Todos los derechos reservados</p>
             <p className="text-sm text-gray-500 mt-2">Versión Alpha - Siempre gratuita para todos</p>
           </div>
         </div>
