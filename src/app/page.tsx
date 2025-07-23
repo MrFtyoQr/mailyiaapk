@@ -136,10 +136,10 @@ export default function Component() {
               {/* Aquí puedes agregar créditos adicionales si lo deseas */}
             </div>
           </div>
-          {/* Badge de fase alpha */}
+          {/* Badge de fase Beta */}
           <Badge variant="secondary" className="bg-green-100 text-green-800">
             <Play className="w-3 h-3 mr-1" />
-            Fase Alpha
+            Fase Beta
           </Badge>
         </div>
       </header>
@@ -181,7 +181,7 @@ export default function Component() {
                 className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-4 text-lg rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/11gq3ePJ0Dz7HKjh94vmRotiLV530sm6v/view?usp=sharing",
+                    "https://drive.google.com/file/d/1S3qJchhT5s-Hv6_SSBB0iXB5oUoOPuVy/view?usp=sharing",
                     "_blank",
                   )
                 }
@@ -369,7 +369,7 @@ export default function Component() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-4xl font-bold text-white mb-6">¡Descarga Maily T Cuida Ahora!</h2>
             <p className="text-xl text-green-100 mb-8">
-              Únete a la revolución del cuidado de la salud digital. Descarga la versión Alpha y comienza a monitorear
+              Únete a la revolución del cuidado de la salud digital. Descarga la versión Beta y comienza a monitorear
               tu bienestar hoy mismo.
             </p>
 
@@ -378,7 +378,7 @@ export default function Component() {
               <div className="flex items-center justify-center mb-4">
                 <Image src="/MailyLog.png" alt="Maily T Cuida" width={80} height={80} className="rounded-xl" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-2">Versión Alpha Disponible</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">Versión Beta Disponible</h3>
               <p className="text-green-100 mb-6">Aplicación nativa para Android - En desarrollo activo</p>
 
               <Button
@@ -386,7 +386,7 @@ export default function Component() {
                 className="bg-white text-green-600 hover:bg-gray-100 px-12 py-4 text-xl rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/11gq3ePJ0Dz7HKjh94vmRotiLV530sm6v/view?usp=sharing",
+                    "https://drive.google.com/file/d/1S3qJchhT5s-Hv6_SSBB0iXB5oUoOPuVy/view?usp=sharing",
                     "_blank",
                   )
                 }
@@ -661,7 +661,7 @@ export default function Component() {
 
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
             <p className="text-gray-400">© 2025 Maily T Cuida - Todos los derechos reservados</p>
-            <p className="text-sm text-gray-500 mt-2">Versión Alpha - En desarrollo continuo</p>
+            <p className="text-sm text-gray-500 mt-2">Versión Beta - En desarrollo continuo</p>
           </div>
         </div>
       </footer>
