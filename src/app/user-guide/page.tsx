@@ -395,7 +395,7 @@ export default function UserGuide() {
               className="bg-white text-green-600 hover:bg-gray-100 px-12 py-4 text-xl rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1S3qJchhT5s-Hv6_SSBB0iXB5oUoOPuVy/view?usp=sharing",
+                  "https://drive.google.com/file/d/1pYRc2Td_TTx_BHvtFWu_qCTT59K6qF7L/view?usp=sharing",
                   "_blank",
                 )
               }
