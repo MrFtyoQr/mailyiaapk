@@ -532,14 +532,18 @@ export default function Component() {
                     <p className="text-gray-600 text-sm mb-4">Estudiante de la Universidad Tecnológica de Acapulco</p>
                     <p className="text-gray-700 text-sm">
                       Responsable de la integración con inteligencia artificial, desarrollo de la calculadora de signos
-                      vitales, implementación del sistema de graficación de datos médicos y arquitectura completa del
-                      backend. Su expertise en algoritmos y lógica de negocio ha sido fundamental para el funcionamiento
-                      robusto de la aplicación.
+                      vitales, implementación del sistema de graficación de datos médicos, encargado del diseño e 
+                      implementación de toda la estructura de almacenamiento de datos médicos. Su trabajo garantiza la integridad,
+                      seguridad y eficiencia en el manejo de información sensible de salud de los usuarios. Su expertise en algoritmos 
+                      y lógica de negocio ha sido fundamental para el funcionamiento robusto de la aplicación.
                     </p>
                     <div className="flex items-center mt-4 space-x-2">
                       <Brain className="w-4 h-4 text-purple-500" />
                       <TrendingUp className="w-4 h-4 text-blue-500" />
                       <Zap className="w-4 h-4 text-yellow-500" />
+                      <Database className="w-4 h-4 text-green-500" />
+                      <Shield className="w-4 h-4 text-blue-500" />
+                      <Activity className="w-4 h-4 text-red-500" />
                     </div>
                   </div>
                 </CardContent>
@@ -580,40 +584,6 @@ export default function Component() {
                 </CardContent>
               </Card>
 
-              {/* Card: Kevin Eduardo */}
-              <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="relative">
-                    <div className="w-full h-64 overflow-hidden">
-                      <Image
-                        src="/kevin.png"
-                        alt="Kevin Eduardo"
-                        width={300}
-                        height={256}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                    <div className="absolute top-4 right-4 bg-green-600 text-white p-2 rounded-full">
-                      <Database className="w-5 h-5" />
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h4 className="text-xl font-bold text-gray-800 mb-2">Kevin Eduardo</h4>
-                    <p className="text-green-600 font-medium mb-3">Arquitecto de Base de Datos & Gestión de Datos</p>
-                    <p className="text-gray-600 text-sm mb-4">Estudiante de la Universidad Tecnológica de Acapulco</p>
-                    <p className="text-gray-700 text-sm">
-                      Especialista en arquitectura y gestión de bases de datos, encargado del diseño e implementación de
-                      toda la estructura de almacenamiento de datos médicos. Su trabajo garantiza la integridad,
-                      seguridad y eficiencia en el manejo de información sensible de salud de los usuarios.
-                    </p>
-                    <div className="flex items-center mt-4 space-x-2">
-                      <Database className="w-4 h-4 text-green-500" />
-                      <Shield className="w-4 h-4 text-blue-500" />
-                      <Activity className="w-4 h-4 text-red-500" />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
             </div>
 
             {/* Stats del equipo */}
