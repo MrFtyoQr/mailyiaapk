@@ -508,7 +508,7 @@ export default function Component() {
               <p className="text-lg text-gray-600">Estudiantes de la Universidad Tecnológica de Acapulco</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {/* Card: Joseph Quintana */}
               <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-0 bg-white/80 backdrop-blur-sm overflow-hidden">
                 <CardContent className="p-0">
