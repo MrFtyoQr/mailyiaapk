@@ -518,7 +518,7 @@ export default function Component() {
                         src="/joseph.jpg"
                         alt="Joseph Quintana"
                         width={300}
-                        height={256}
+                        height={300}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
