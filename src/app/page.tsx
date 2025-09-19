@@ -181,7 +181,7 @@ export default function Component() {
                 className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-4 text-lg rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/1GxATycL0I46sblgVEX3uUlaN6Z32jyw3/view?usp=sharing",
+                    "https://drive.google.com/file/d/12nHi1sFlWf8X87ksoisoI9McuCneLjxy/view?usp=sharing",
                     "_blank",
                   )
                 }
@@ -386,7 +386,7 @@ export default function Component() {
                 className="bg-white text-green-600 hover:bg-gray-100 px-12 py-4 text-xl rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"
                 onClick={() =>
                   window.open(
-                    "https://drive.google.com/file/d/1GxATycL0I46sblgVEX3uUlaN6Z32jyw3/view?usp=sharing",
+                    "https://drive.google.com/file/d/12nHi1sFlWf8X87ksoisoI9McuCneLjxy/view?usp=sharing",
                     "_blank",
                   )
                 }
